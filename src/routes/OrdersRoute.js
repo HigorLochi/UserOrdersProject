@@ -1,10 +1,9 @@
 const OrderController = require('../controllers/OrderController');
 const bodyParser = require('body-parser')
-
-var jsonParser = bodyParser.json()
+const auth = require('../middlewares/auth');
 
 module.exports = (app) => {
-   app.get('/orders', OrderController.getAll);
-   app.get('/orders/:userid', OrderController.getByUserId);
-   app.post('/orders', jsonParser, OrderController.post);
+   app.get('/orders', auth(), OrderController.getAll);
+   app.get('/orders/:userid', auth(), OrderController.getByUserId);
+   app.post('/orders', auth(), OrderController.post);
 }

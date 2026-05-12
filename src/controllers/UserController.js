@@ -11,8 +11,15 @@ module.exports = {
             if(req.body.login && req.body.password){
                 const user = await User.findOne({ where: { login: req.body.login } });
 
-                if(user && passwordHash.verify(req.body.password, user.password)) 
+                if(user && passwordHash.verify(req.body.password, user.password)){
                     auth = true;
+
+                    req.session.user = {
+                        id: user.id,
+                        name: user.name,
+                        login: user.login
+                    };
+                }
             } 
 
             res.status(201).send(auth);
@@ -70,7 +77,7 @@ module.exports = {
 
             transaction.commit();
 
-            res.status(200).send({message: message});
+            res.status(200).send({message: "User(s) updated."});
         }catch(e){
             transaction.rollback();
 
