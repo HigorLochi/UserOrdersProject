@@ -1,0 +1,32 @@
+{
+  "name": "userordersproject",
+  "version": "1.0.0",
+  "description": "API to simulate some features of a World up.",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "userordersproject": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HigorLochi/UserOrdersProject.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HigorLochi/UserOrdersProject/issues"
+  },
+  "homepage": "https://github.com/HigorLochi/UserOrdersProject#readme",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.4.2",
+    "express": "^4.18.2",
+    "mysql2": "^2.3.3",
+    "nodemon": "^3.1.14",
+    "password-hash": "^1.2.2",
+    "sequelize": "^6.25.3",
+    "sqlite3": "^5.1.2"
+  }
+}
