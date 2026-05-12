@@ -3,7 +3,7 @@ const session = require('express-session');
 const cors = require('cors');
 
 const app = express();
-const sequelize = require('./config/database');
+const sequelize = require('./config/connection');
 
 app.use(cors());
 app.use(express.json());
@@ -23,6 +23,6 @@ require('./routes/index')(app);
 
 sequelize.authenticate().then(() => {
     app.listen(3333);
-}).catch(err => {
-    console.log(err);
+}).catch(e => {
+    console.log(e.message);
 });

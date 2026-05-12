@@ -1,5 +1,5 @@
-const { User, Order, OrderDescription } = require('../classes');
-const sequelize = require('../config/database');
+const { User, Order, OrderDescription } = require('../models');
+const sequelize = require('../config/connection');
 
 module.exports = {
     async getAll(req, res){

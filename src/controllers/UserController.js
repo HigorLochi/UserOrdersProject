@@ -1,5 +1,5 @@
-const sequelize = require('../config/database');
-const { User } = require('../classes');
+const sequelize = require('../config/connection');
+const { User } = require('../models');
 
 var passwordHash = require('password-hash');
 
@@ -22,7 +22,7 @@ module.exports = {
                 }
             } 
 
-            res.status(201).send(auth);
+            res.status(200).send(auth);
         }catch(e){
             res.status(500).send(false);
         }
@@ -77,7 +77,7 @@ module.exports = {
 
             transaction.commit();
 
-            res.status(200).send({message: "User(s) updated."});
+            res.status(201).send({message: "User(s) updated."});
         }catch(e){
             transaction.rollback();
 
