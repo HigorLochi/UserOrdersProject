@@ -75,3 +75,9 @@ Requires a body containing a object with orders properties, retuns a message wit
 | orderid  | number |   Yes    |
 | product  | string |   Yes    |
 | quantity | number |   Yes    |
+
+## Improvements to be done
+
+1. Migrations
+2. Seeders
+3. Dedicated configuration for table fields
