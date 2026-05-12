@@ -51,10 +51,10 @@ Requires a body containing a object with orders properties, retuns a message wit
 |----------|--------|----------|
 |   cpf    | string |   Yes    |
 |    rg    | string |   No     |
-|   name   | number |   Yes    |
+|   name   | string |   Yes    |
 |   age    | number |   No     |
-|   login  | number |   Yes    |
-| password | number |   Yes    |
+|   login  | string |   Yes    |
+| password | string |   Yes    |
 
 ### Order
 
