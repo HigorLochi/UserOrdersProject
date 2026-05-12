@@ -16,6 +16,10 @@ This API aims to simulate the creation and managament of users and their orders.
 6. Start accessing the routes
 
 ## Routes (Only the login route is available without a session)
+
+### URL Example
+http://localhost:3333/login
+
 ### User
 
 1. /login (POST)<br />

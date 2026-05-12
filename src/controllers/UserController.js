@@ -9,7 +9,7 @@ module.exports = {
             let auth = false;
 
             if(req.body.login && req.body.password){
-                const user = await User.findOne({ where: { login: req.body.login } });
+                const user = await User.findOne({ where: { login: req.body.login }});
 
                 if(user && passwordHash.verify(req.body.password, user.password)){
                     auth = true;
@@ -24,7 +24,7 @@ module.exports = {
 
             res.status(200).send(auth);
         }catch(e){
-            res.status(500).send(false);
+            res.status(500).send(e.message);
         }
     },
 
