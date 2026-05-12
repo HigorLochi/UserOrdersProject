@@ -2,48 +2,46 @@
 This API aims to simulate the creation and managament of users and their orders.
 
 ## Necessary Tools
-1. Postman
-2. XAMPP
-3. npm
-4. Node.js
-5. NPM ou Yarn
-6. Banco de dados (MySQL)
+1. Postman (https://www.postman.com/downloads/)
+2. XAMPP (https://www.apachefriends.org/pt_br/download.html)
+3. npm (https://nodejs.org/en/download)
+4. Node.js (https://nodejs.org/en/download)
    
 ## Steps
 1. import ./jsons/UserOrdersProject.postman_collection.json into Postman
-2. run XAMPP
+2. run XAMPP and intiate Apache and MySQL
 3. run the SQLs in the folder ./sql
 4. access the project directory and run npm i
 5. npm run userordersproject
-6. Start running the routes
+6. Start accessing the routes
 
 ## Routes (Only the login route is available without a session)
 ### User
 
-1. /login (POST)
+1. /login (POST)<br />
 Requires a body containing an object with the login and password, validanting and returning a boolean as authentication.
 
-2. /users (GET)
+2. /users (GET)<br />
 Returns all users.
     
-3. /users (POST)
+3. /users (POST)<br />
 Requires a body containing an array with the users to be added, retuns a message with the operation result.
 
-4. /users/{userid} (PUT)
+4. /users/{userid} (PUT)<br />
 Requires the user's id in the header and a body containing the class properties, retuns a message with the operation result.
 
-5. /users/{userid} (DELETE)
+5. /users/{userid} (DELETE)<br />
 Requires the user's id as parameter and deletes itself, retuns a message with the operation result.
 
 ### Orders 
 
-1. /orders (GET)
+1. /orders (GET)<br />
 Returns all order.
 
-2. /orders/{userid} (GET)
+2. /orders/{userid} (GET)<br />
 Requires the user's id in the header, retuns all order of the user.
 
-3. /orders (POST)
+3. /orders (POST)<br />
 Requires a body containing a object with orders properties, retuns a message with the operation result.
 
 
