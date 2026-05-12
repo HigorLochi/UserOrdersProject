@@ -36,10 +36,10 @@ Requires the user's id as parameter and deletes itself, retuns a message with th
 ### Orders 
 
 1. /orders (GET)<br />
-Returns all order.
+Returns all orders.
 
 2. /orders/{userid} (GET)<br />
-Requires the user's id in the header, retuns all order of the user.
+Requires a user's id in the header, retuns all user's orders.
 
 3. /orders (POST)<br />
 Requires a body containing a object with orders properties, retuns a message with the operation result.
