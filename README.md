@@ -17,7 +17,7 @@ This API aims to simulate the creation and managament of users and their orders.
 5. npm run userordersproject
 6. Start running the routes
 
-## Routes
+## Routes (Only the login route is available without a session)
 ### User
 
 1. /login (POST)
