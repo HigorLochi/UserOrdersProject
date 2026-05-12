@@ -1,0 +1,24 @@
+[
+    {
+        "userid": 1,
+        "descriptions": [
+            {
+                "product": "Example 1",
+                "quantity": 1
+            }   
+        ]
+    },
+    {
+        "userid": 1,
+        "descriptions": [
+            {
+                "product": "Example 2",
+                "quantity": 2
+            },
+            {
+                "product": "Example 3",
+                "quantity": 3
+            }  
+        ]
+    }
+]

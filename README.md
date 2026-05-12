@@ -1,5 +1,5 @@
 # UserOrdersProject
-This API aims to simulate the classification of a World Cup, allowing for the selection of matches and the calculation of the table based on the results.
+This API aims to simulate the creation and managament of users and their orders.
 
 ## Necessary Tools
 1. Postman
@@ -10,42 +10,40 @@ This API aims to simulate the classification of a World Cup, allowing for the se
 6. Banco de dados (MySQL)
    
 ## Steps
-1. import ./jsons/WorldCupAPI.postman_collection.js into Postman
+1. import ./jsons/UserOrdersProject.postman_collection.json into Postman
 2. run XAMPP
-3. create a database called worldcup
-4. run the sql in ./sql/createtables.sql
-5. npm i nodemon
-6. npm i password-hash
-7. npm i
-8. npm run worldcupapi
-9. Start running the routes
+3. run the SQLs in the folder ./sql
+4. access the project directory and run npm i
+5. npm run userordersproject
+6. Start running the routes
 
 ## Routes
-### Common
-Every class has 5 common routes:
+### User
 
-1. post (POST)
-    Requires a body containing the class properties, and register a record.
+1. /login (POST)
+    Requires a body containing an object with the login and password, validanting and returning a boolean as authentication.
 
-2. put (PUT)
-    Requires the record's id and a body containing the class properties, and updates the record.
+2. /users (GET)
+    Returns all users.
+    
+3. /users (POST)
+    Requires a body containing an array with the users to be added, retuns a message with the operation result.
 
-3. getAll (GET)
-    Returns all records.
+4. /users/{userid} (PUT)
+    Requires the user's id in the header and a body containing the class properties, retuns a message with the operation result.
 
-4. getById (GET)
-    Requires the record's id as parameter and returns itself.
+5. /users/{userid} (DELETE)
+    Requires the user's id as parameter and deletes itself, retuns a message with the operation result.
 
-5. Delete (DELETE)
-    Requires the record's id as parameter and deletes itself.
+### Orders 
 
-### Distinct 
-The distinct routes are from the WorldCup class.
+1. /orders (GET)
+    Returns all order.
 
-1. setoitavasdefinal (GET)
-    Register base matchs randomly, and requires the worldcup id.
+2. /orders/{userid} (GET)
+    Requires the user's id in the header, retuns all order of the user.
 
-1. advancephase (GET)
-    Register the next phase matchs, and requires the worldcup id.
+3. /orders (POST)
+    Requires a body containing a object with orders properties, retuns a message with the operation result.
 
 

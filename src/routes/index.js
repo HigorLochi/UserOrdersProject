@@ -1,7 +1,7 @@
-require('dotenv').config()
-
 const UsersRoute = require('./UsersRoute');
+const OrdersRoute = require('./OrdersRoute');
 
 module.exports = (app) => {
-   UsersRoute(app)
+   UsersRoute(app),
+   OrdersRoute(app)
 }
