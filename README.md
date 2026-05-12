@@ -58,10 +58,10 @@ Requires a body containing a object with orders properties, retuns a message wit
 
 ### Order
 
-|        Field       |       Type       | Required |
-|--------------------|------------------|----------|
-|       userid       |      string      |   Yes    |
-|    descriptions    | OrderDescription |   Yes    |
+|        Field       |        Type        | Required |
+|--------------------|--------------------|----------|
+|       userid       |       string       |   Yes    |
+|    descriptions    | [OrderDescription] |   Yes    |
 
 
 ### OrderDescription
