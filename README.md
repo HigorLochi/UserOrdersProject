@@ -44,4 +44,30 @@ Requires a user's id in the header, retuns all user's orders.
 3. /orders (POST)<br />
 Requires a body containing a object with orders properties, retuns a message with the operation result.
 
+## Schemas
+### User
 
+|   Field  |  Type  | Required |
+|----------|--------|----------|
+|   cpf    | string |   Yes    |
+|    rg    | string |   No     |
+|   name   | number |   Yes    |
+|   age    | number |   No     |
+|   login  | number |   Yes    |
+| password | number |   Yes    |
+
+### Order
+
+|        Field       |       Type       | Required |
+|--------------------|------------------|----------|
+|       userid       |      string      |   Yes    |
+|    descriptions    | OrderDescription |   Yes    |
+
+
+### OrderDescription
+
+|   Field  |  Type  | Required |
+|----------|--------|----------|
+| orderid  | number |   Yes    |
+| product  | string |   Yes    |
+| quantity | number |   Yes    |
