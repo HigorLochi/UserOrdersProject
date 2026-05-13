@@ -1,22 +1,17 @@
 const fs = require('fs');
 const path = require('path');
 const sequelize = require('../config/connection');
-const { DataTypes } = require('sequelize');
-
 const db = {};
 
-fs.readdirSync(__dirname)
-  .filter(file => file !== 'index.js')
-  .forEach(file => {
-    const modelFactory = require(path.join(__dirname, file));
+fs.readdirSync(__dirname).filter(file => file !== 'index.js').forEach(file => {
+  const modelFactory = require(path.join(__dirname, file));
+  const columns = require(path.join('../database', (file.split("."))[0].toLowerCase() + 'Columns.js'))
+  const model = modelFactory(sequelize, columns);
 
-    const model = modelFactory(sequelize, DataTypes);
+  db[model.name] = model;
+});
 
-    db[model.name] = model;
-  });
-
-
-  Object.keys(db).forEach(modelName => {
+Object.keys(db).forEach(modelName => {
   if (db[modelName].associate) {
     db[modelName].associate(db);
   }
