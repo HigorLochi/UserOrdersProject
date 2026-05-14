@@ -67,7 +67,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"cpf\": \"987.654.321-00\",\r\n    \"rg\": \"98.765.432-1\",\r\n    \"name\": \"Maria Silva\",\r\n    \"age\": 21,\r\n    \"email\": \"maria@example.com\",\r\n    \"login\": \"maria\",\r\n    \"password\": \"maria123\"\r\n}",
+              "raw": "{\r\n    \"cpf\": \"987.654.321-00\",\r\n    \"rg\": \"98.765.432-1\",\r\n    \"name\": \"Maria Silva\",\r\n    \"age\": 29,\r\n    \"email\": \"maria@example.com\",\r\n    \"login\": \"maria\",\r\n    \"password\": \"maria123\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -75,7 +75,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:3333/users/2",
+              "raw": "http://localhost:3333/users/4",
               "protocol": "http",
               "host": [
                 "localhost"
@@ -83,7 +83,7 @@
               "port": "3333",
               "path": [
                 "users",
-                "2"
+                "4"
               ]
             }
           },
@@ -96,7 +96,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"login\": \"higor\",\r\n    \"password\": \"admin123\"\r\n}",
+              "raw": "{\r\n    \"login\": \"test\",\r\n    \"password\": \"test\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -163,7 +163,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"userid\": 3,\r\n    \"descriptions\": [\r\n        {\r\n            \"product\": \"Example 2\",\r\n            \"quantity\": 2\r\n        },\r\n        {\r\n            \"product\": \"Example 3\",\r\n            \"quantity\": 3\r\n        }  \r\n    ]\r\n}",
+              "raw": "{\r\n    \"userid\": 4,\r\n    \"descriptions\": [\r\n        {\r\n            \"product\": \"Example 2\",\r\n            \"quantity\": 2\r\n        },\r\n        {\r\n            \"product\": \"Example 3\",\r\n            \"quantity\": 3\r\n        }  \r\n    ]\r\n}",
               "options": {
                 "raw": {
                   "language": "json"

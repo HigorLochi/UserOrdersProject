@@ -21,6 +21,10 @@ const userColumns = {
     age: {
       type: DataTypes.INTEGER
     },
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     login: {
       type: DataTypes.STRING,
       allowNull: false

@@ -24,5 +24,5 @@ require('./routes/index')(app);
 sequelize.authenticate().then(() => {
     app.listen(3333);
 }).catch(e => {
-    console.log(e.message);
+    console.log(e);
 });

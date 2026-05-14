@@ -5,7 +5,8 @@
   "main": "src/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "userordersproject": "nodemon src/server.js"
+    "userordersproject": "nodemon src/server.js",
+    "sequelize": "dotenv sequelize"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
     "mysql2": "^2.3.3",
     "nodemon": "^3.1.14",
     "password-hash": "^1.2.2",
+    "pg": "^8.20.0",
     "sequelize": "^6.25.3",
     "sqlite3": "^5.1.2"
   }
